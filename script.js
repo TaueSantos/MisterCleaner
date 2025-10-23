@@ -1,9 +1,8 @@
-// Espera todo o conteúdo HTML da página ser carregado ANTES de executar QUALQUER código
 document.addEventListener("DOMContentLoaded", function() {
 
-    // =========================================
+  
     // 1. CÓDIGO DO SCROLL SUAVE
-    // =========================================
+    
     try {
         const linksDoMenu = document.querySelectorAll('header nav a[href^="#"]');
         linksDoMenu.forEach(link => {
@@ -24,9 +23,9 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
 
-    // =========================================
+
     // 2. CÓDIGO DO SLICK CAROUSEL
-    // =========================================
+    
     try {
         $('.galeria-carousel').slick({
             dots: true,       // Mostra os pontinhos de navegação embaixo
@@ -58,4 +57,4 @@ document.addEventListener("DOMContentLoaded", function() {
         console.error("Erro ao inicializar o Slick Carousel (Verifique se jQuery e Slick.js estão carregados ANTES deste script):", e);
     }
 
-}); // <-- ESTA É A ÚNICA CHAVE DE FECHAMENTO PARA O DOMContentLoaded
+}); 
