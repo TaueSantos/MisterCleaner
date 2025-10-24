@@ -462,17 +462,32 @@ footer iframe,
         font-size: 16px;
     } 
 
-    
+    .slick-prev, .slick-next {
+        position: absolute; /* Garante que 'z-index' funcione corretamente */
+        top: 50%; /* Centraliza verticalmente */
+        transform: translateY(-50%); /* Ajusta para centralizar perfeitamente */
+        width: 30px; /* Dá uma largura definida para as setas */
+        height: 30px; /* Dá uma altura definida */
+        display: flex; /* Para centralizar o ícone dentro da seta */
+        align-items: center; /* Centraliza verticalmente */
+        justify-content: center; /* Centraliza horizontalmente */
+        z-index: 10; /* <-- AUMENTADO PARA GARANTIR PRIORIDADE */
+        background: rgba(0, 0, 0, 0.4); /* Fundo sutil para destacá-las */
+        border-radius: 50%; /* Arredonda o fundo */
+        padding: 5px; /* Espaçamento interno */
+    }
+
     .slick-prev {
-        left: 0px; 
+        left: 5px; /* Move para a borda esquerda */
     }
 
     .slick-next {
-        right: 0px; 
+        right: 5px; /* Move para a borda direita */
     }
 
     .slick-prev:before, .slick-next:before {
-        font-size: 24px; 
+        font-size: 20px; /* Ajusta o tamanho do ícone da seta */
+        color: var(--cor-texto-claro); /* Cor branca mais forte */
+        opacity: 1; /* Garante visibilidade total */
     }
-
-} 
+  }
