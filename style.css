@@ -287,16 +287,47 @@ header nav a:hover {
 }
 
 /* Personalizando as setas do Slick */
+
+
+.slick-prev, .slick-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6); /* <-- AUMENTEI A OPACIDADE DO FUNDO PARA MELHOR CONTRASTE */
+  border-radius: 50%;
+  padding: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); /* <-- SOMBRA DE CAIXA CONSISTENTE */
+  transition: background 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+}
+
+
 .slick-prev:before, .slick-next:before {
-  font-size: 30px; 
-  color: var(--cor-texto-claro); 
-  opacity: 0.80;
-}
-
-.slick-prev:hover:before, .slick-next:hover:before {
+  font-family: 'slick';
+  font-size: 40px; /* Reduzi um pouco para caber melhor no círculo */
+  color: var(--cor-texto-claro);
   opacity: 1;
+  text-shadow: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* --- CENTRALIZAÇÃO ABSOLUTA --- */
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1; /* Ainda ajuda no alinhamento vertical do caractere */
 }
 
+.slick-prev:hover, .slick-next:hover {
+  background: rgba(0, 0, 0, 0.8); /* <-- ESCURECE MAIS NO HOVER */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6); /* <-- SOMBRA MAIS INTENSA NO HOVER */
+}
 
 /* AVALIAÇÕES (VIDRO) */
 
